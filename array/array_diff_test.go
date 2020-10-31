@@ -21,3 +21,12 @@ func TestArrayDiffInt64(t *testing.T) {
 		t.Errorf("expected %v but get %v",expected,diff)
 	}
 }
+func TestArrayDiffString(t *testing.T) {
+	a := []string{"1","2","3","4"}
+	b := []string{"3","4","2","5"}
+	diff := DiffString(a,b)
+	expected := "1"
+	if diff[0] != expected {
+		t.Errorf("expected %v but get %v",expected,diff)
+	}
+}
